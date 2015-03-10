@@ -1,1 +1,175 @@
+.sign_up_box {
+    
+    color: white;
+    margin: 20px;
+    font-family: sans-serif;
+    font-size: 20px;
+}
 
+.login_box {
+    color: white;
+    margin: 20px;
+    font-family:sans-serif;
+    font-size: 20px;
+}
+
+.login_toggle {
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    margin: 30px;
+    font-family:sans-serif;
+}
+
+.box_tweet_gender {
+    color: white;
+    margin: 20px;
+    font-family:sans-serif;
+    font-size: 20px;
+}
+
+
+.box {
+    background-color: white;
+    margin-bottom: 5px;
+    
+}
+
+.box_sort {
+    
+}
+
+.box_hello {
+    color: white;
+    font-family: sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+a {
+    font-size: 20px;
+}
+
+.box_tweet {
+    height: 150px;
+    margin: 20px;
+    background-color: #bf0060;
+    margin-bottom: -15px; 
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+}
+.box_tweet2 {
+    color: #d05;
+    height: 150px;
+    margin: 20px;
+    background-color: #030052;
+    margin-bottom: -15px; 
+    border: 2px;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    
+}
+
+.dropdown select {
+    border: 0 !important;.  /*Removes border*/
+     -webkit-appearance: none;  /*Removes default chrome and safari style*/
+     -moz-appearance: none;  /*Removes default style Firefox*/
+    background-color: transparent;
+    height: 25px;
+    margin: 20px;
+    font-family: sans-serif;
+}
+
+.dropdown p {
+	display: inline-block;
+	font-weight: bold;
+}
+
+.login_page {
+    background-image: url("../images/a1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-origin: content-box 
+}
+
+.tweet_page {
+    background-color: #d6d6d4;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-origin: content-box 
+}
+
+p {
+   
+}
+
+input[type="password"] {
+    width: 150px;
+	height: 25px;
+    background: transparent;
+    border: none;
+    border: 1px solid #000000;
+    border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+    font-weight: 400;
+	padding: 4px;
+}
+
+input[type="text"] {
+    width: 150px;
+	height: 25px;
+    background: transparent;
+    border: none;
+    border: 1px solid #000000;
+    border: 1px solid rgba(255,255,255,0.6);
+	border-radius: 2px;
+    font-weight: 400;
+	padding: 4px;
+}
+
+input[type="text"]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+input[type="password"]:focus{
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.9);
+}
+
+.login input[type="submit"]:focus{
+	outline: none;
+}
+
+input[type="submit"] {
+    width: 200px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin-top: 10px;
+}
+
+input[type="submit"]:active{
+	opacity: 0.6;
+}
+
+input[type="submit"]:hover{
+	opacity: 0.8;
+}
+
+::-webkit-input-placeholder{
+    color: rgba(255, 255, 255, 0.6)!important; 
+}
+
+::-moz-input-placeholder{
+   color: rgba(255,255,255,0.6);
+}
