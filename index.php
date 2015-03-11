@@ -5,13 +5,13 @@
   
 <?php     
     if(isset($_POST["submit"])) {
-        $name = ucfirst($_POST["name"]);
+        //$name = ucfirst($_POST["name"]);
         $tweet = ucfirst($_POST["tweet"]);
-        $gender = ucfirst($_POST["gender"]);
+        //$gender = ucfirst($_POST["gender"]);
     } else {
-        $name = "";
+        //$name = "";
         $tweet = ""; 
-        $gender = "";
+        //$gender = "";
     }
 
 
@@ -35,13 +35,15 @@
         
         $name = $_POST['name'];
         $password = $_POST['password'];
+        $student_id = $_POST['student_id'];
+        $gender = $_POST["gender"];
         
         if(empty($name)) {
             $message = "Invalid name";
         } else if(empty($password)) {
             $message = "Invalid password";
         } else {
-            $query = "INSERT INTO users (name, password) VALUES ('{$name}', '{$password}')";
+            $query = "INSERT INTO users (name, password, student_id, gender) VALUES ('{$name}', '{$password}', '{$student_id}','{$gender}')";
             $result = mysqli_query($connect, $query); 
 
             if($result) {
@@ -52,6 +54,8 @@
             
             $name = "";
             $password = ""; 
+            $student_id = "";
+            $gender = "";
   
         }
     }
@@ -61,14 +65,14 @@
     if(isset($_POST["submit"])) {
         
         $tweet = $_POST['tweet'];
-        $gender = $_POST['gender'];
+        //$gender = $_POST['gender'];
         
         if(empty($tweet)) {
             $message = "Invalid tweet";
-        }else if(empty($gender)) {
-            $message = "Please select gender";
-        } else {
-            $query = "INSERT INTO posts (name, tweet, gender) VALUES ('{$name}', '{$tweet}', '{$gender}')";
+        }//else if(empty($gender)) {
+            //$message = "Please select gender";} 
+        else {
+            $query = "INSERT INTO posts (tweet, name, gender) VALUES ('{$tweet}', '{$_SESSION['user']}', '{$_SESSION['gender']}')"; //gender not yet added to sign_up
             $result = mysqli_query($connect, $query); 
 
             if($result) {
@@ -147,7 +151,7 @@
                             <form action="index.php" method="post" autocomplete="off">
                             <input type="text" name="name" value="" placeholder="Name"/>
                             <input type="password" name="password" value="" placeholder="Password"/>
-                            <input type="password" name="password" value="" placeholder="Confirm Password"/>
+                            <input type="password" name="confirm_password" value="" placeholder="Confirm Password"/>
                             <input type="text" name="student_id" value="" placeholder="Student ID"/>
                             <div class="dropdown">    
                             Select gender: <select name="gender">
