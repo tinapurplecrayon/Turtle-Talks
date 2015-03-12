@@ -35,27 +35,45 @@
         
         $name = $_POST['name'];
         $password = $_POST['password'];
+        $confirm_password = $_POST['confirm_password'];
         $student_id = $_POST['student_id'];
         $gender = $_POST["gender"];
-        
+
         if(empty($name)) {
-            $message = "Invalid name";
+            $message = "Please enter valid name. ";
+            echo '<div class="message">'.$message.'</div>';
         } else if(empty($password)) {
-            $message = "Invalid password";
+            $message = "Please enter valid password. ";
+            echo '<div class="message">'.$message.'</div>';
+        } else if(empty($confirm_password)) {
+            $message = "Please enter password again. ";
+            echo '<div class="message">'.$message.'</div>';
+        } else if ($password != $confirm_password) {
+            $message = "Passwords do not match. ";
+            echo '<div class="message">'.$message.'</div>';
+        } else if(empty($student_id)) {
+            $message = "Please enter valid Student ID. ";
+            echo '<div class="message">'.$message.'</div>';
+        } else if(empty($gender)) {
+            $message = "Please enter valid gender. ";
+            echo '<div class="message">'.$message.'</div>';
         } else {
             $query = "INSERT INTO users (name, password, student_id, gender) VALUES ('{$name}', '{$password}', '{$student_id}','{$gender}')";
             $result = mysqli_query($connect, $query); 
+            $message = "Your account has been registered!";
+            echo $message; 
+                if($result) {
+                    
+                        $message = "Success, your account was added!";   
+                    } else {
+                        $message = "Sorry, something went wrong!"; 
+                    }
 
-            if($result) {
-                $message = "Success, your account was added!";   
-            } else {
-                $message = "Sorry, something went wrong!"; 
-            }
-            
-            $name = "";
-            $password = ""; 
-            $student_id = "";
-            $gender = "";
+                    $name = "";
+                    $password = ""; 
+                    $confirm_password = ""; 
+                    $student_id = "";
+                    $gender = "";
   
         }
     }
@@ -134,6 +152,7 @@
         </body>
             <body class="tweet_page">
             <?php } else {?>
+                    <h1 class="register-title">Welcome</h1>
                     <div class="login_box">
                         <form action="index.php" method="post" autocomplete="off">
                             <p>You have an account?</p>
@@ -146,23 +165,26 @@
                         <p> No account?</p>
                         </div>
         
-                     <div class="sign_up_box">
-                            <p>Sign up.</p>
+                     <div class="sign_up_box">   
+                            <p>No account? Sign up.</p>
                             <form action="index.php" method="post" autocomplete="off">
+                            <div class="register-switch">
+                                  <input type="radio" name="gender" value="female" id="sex_f" class="register-switch-input" checked>
+                                  <label for="sex_f" class="register-switch-label">Female</label>
+                                  <input type="radio" name="gender" value="male" id="sex_m" class="register-switch-input">
+                                  <label for="sex_m" class="register-switch-label">Male</label>
+                                </div>
                             <input type="text" name="name" value="" placeholder="Name"/>
                             <input type="password" name="password" value="" placeholder="Password"/>
                             <input type="password" name="confirm_password" value="" placeholder="Confirm Password"/>
                             <input type="text" name="student_id" value="" placeholder="Student ID"/>
                             <div class="dropdown">    
-                            Select gender: <select name="gender">
-                            <option value="">--Select--</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                        </select>
-                            <input type="submit" name="signup" value="Sign up!" /> </p> 
-                        </form>
-                    </div>
+                                <input type="submit" name="signup" value="Sign up!"/> </p> 
+                            </form>
+                            </div>
             <?php } ?>
+        
+
             
     </body>
     <body class="login_page">
@@ -216,8 +238,6 @@
     mysqli_free_result($result);
     mysqli_close($connect);
 ?>
-
-
 
 
 <?php include_once("../includes/templates/footer.php"); ?> 
