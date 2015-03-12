@@ -23,8 +23,10 @@
         
         if ($user = mysqli_fetch_assoc($result)) {
             $_SESSION["user"] = $user["name"];
+            $_SESSION["gender"] = $user["gender"];
         } else {
-            $message = "wrong name/password";
+            $message = "Please enter a valid username and password.";
+            echo '<div class="message">'.$message.'</div>';
         }
     } 
 
@@ -74,7 +76,7 @@
                     $confirm_password = ""; 
                     $student_id = "";
                     $gender = "";
-  
+
         }
     }
 ?>
@@ -83,6 +85,7 @@
     if(isset($_POST["submit"])) {
         
         $tweet = $_POST['tweet'];
+        
         //$gender = $_POST['gender'];
         
         if(empty($tweet)) {
@@ -90,7 +93,7 @@
         }//else if(empty($gender)) {
             //$message = "Please select gender";} 
         else {
-            $query = "INSERT INTO posts (tweet, name, gender) VALUES ('{$tweet}', '{$_SESSION['user']}', '{$_SESSION['gender']}')"; //gender not yet added to sign_up
+            $query = "INSERT INTO posts (tweet, name, gender) VALUES ('{$tweet}', '{$_SESSION['user']}', '{$_SESSION['gender']}')"; //gender not yet added to sign_up, is not saved in table yet
             $result = mysqli_query($connect, $query); 
 
             if($result) {
@@ -99,8 +102,8 @@
                 $message = "Sorry, something went wrong!"; 
             }
             
-            $name = "";
-            $tweet = ""; 
+            $tweet = "";
+            $name = ""; 
             $gender = "";
   
         }
@@ -144,11 +147,6 @@
         <div class="container">
             
             <?php if(isset($_SESSION["user"])) {?>
-                <div class="box_hello">
-                    <p> Hello, <?php echo $_SESSION["user"]; ?>!
-                    <a href='logout.php' >Logout?</a></p>
-                    
-                </div>
         </body>
             <body class="tweet_page">
             <?php } else {?>
@@ -190,7 +188,13 @@
     <body class="login_page">
            <?php if(isset($_SESSION["user"])) {?> 
             <div class="box_tweet_gender">
-                <form action="index.php" method="post">
+                <div class="box_hello">
+                        <form class= "logout_button" method="link" action="logout.php">
+                        <input type="submit" value="Logout">
+                        </FORM>
+                    </div>
+                <div class="box_hello"><a>Hello, <?php echo ucfirst($_SESSION["user"]); ?>! </a></div>
+                <form class="box_tweet_gender_content" action="index.php" method="post">
                     Tweet: <input type="text" name="tweet" value="<?php echo $tweet; ?>" />
                     <input type="submit" name="submit" value="Submit" />
                 </form>
@@ -201,17 +205,14 @@
             
         
         
-        <?php
+            <?php
                 $x = 1; 
                 while($row = mysqli_fetch_assoc($result)) {
-                    
-                    
                     if ($x % 2 == 0) {
                         include 'box.php';
                     } else {
                         include 'box2.php';
                     }
-                    
                     $x++;
                 }
             ?>
