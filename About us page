@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    
+   
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    
+  
+
+        <div class="container"> 
+      <h2>Turtle Talks</h2>
+      <ul class="nav nav-tabs" role="tablist">   
+        <li class="active"><a href="#">Home</a></li>
+          
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          About <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Meet the team</a></li>
+            <li><a href="#">Bournmouth University</a></li>
+                              
+          </ul>
+        </li>
+      </ul>
+            <button type="button" class="btn btn-info">
+          <span class="glyphicon glyphicon-search"></span> Search
+        </button>
+    </div>
+    
+
+    
+    
+     <div class="container">                
+      <ul class="pager">
+        <li class="previous"><a href="#">Previous</a></li>
+        <li class="next"><a href="#">Next</a></li>
+      </ul>
+    </div>
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  
+    
+    
+    
+        <div class="container">
+      <h2>Meet the team</h2>
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">  <img src="Darlene.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></div>
+Darlene</a>
+            </h4>
+          </div>
+          <div id="collapse1" class="panel-collapse collapse in">
+            <div class="panel-body">Darlene...</div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><img src="rafiel.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></div> Rafiel</a>
+            </h4>
+          </div>
+          <div id="collapse2" class="panel-collapse collapse">
+            <div class="panel-body">Rafiel....</div>
+          </div>
+        </div>
+          
+   
+      
+      </div> 
+    </div>
+    
+     <div class="container">
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">  <img src="tina.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></div>
+Tina</a>
+            </h4>
+          </div>
+          <div id="collapse3" class="panel-collapse collapse in">
+            <div class="panel-body">Tina...</div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4"><img src="bex.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236"></div> Becky</a>
+            </h4>
+          </div>
+          <div id="collapse4" class="panel-collapse collapse">
+            <div class="panel-body">Becky....</div>
+          </div>
+        </div>
+          
+</div>
+</div>
+    
+    
+       
+     <div class="container">
+      <ul class="pagination">
+        <li><a href="#">«</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li ><a href="#">3</a></li>
+        <li><a href="#">»</a></li>
+      </ul>
+    </div>
+
+    
+    
+    
+    
+    
+    <div id="footer">
+Copyright © Turtletalks.com
+</div>
+
+    
+    
+</body>
+</html>
