@@ -47,11 +47,21 @@
 
 .box_tweet_gender {
     color: white;
-    margin: 20px;
+    margin: 20 auto;
     font-family:sans-serif;
     font-size: 20px;
+    position: fixed;
+    background-color: #696969;
+    width: 100%;
+    z-index: 100;
+    opacity: 0.8;
+    top: -20;
 }
 
+.box_tweet_gender_content {
+    text-align: right;
+    margin-right: 35px;
+}
 
 .box {
     background-color: white;
@@ -66,12 +76,15 @@
 .box_hello {
     color: white;
     font-family: sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
+    margin-left: 20px;
+    float: left;
+    line-height: 70px;
 }
 
-a {
-    font-size: 20px;
+.logout_button {
+    float: none;
 }
 
 .message {
@@ -81,24 +94,41 @@ a {
 
 .box_tweet {
     height: 150px;
+    width: 900px;
     margin: 20px;
-    background-color: #bf0060;
+    background-color: #afc600;
     margin-bottom: -15px; 
+    font-family: sans-serif;
+    font-size: 20px;
     text-align: center;
     vertical-align: middle;
     color: white;
+    opacity: 0.8;
+    line-height: 40px;
+    margin: -15 auto;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 .box_tweet2 {
     color: #d05;
     height: 150px;
+    width: 900px;
     margin: 20px;
-    background-color: #030052;
+    background-color: #162174;
     margin-bottom: -15px; 
+    font-family: sans-serif;
+    font-size: 20px;
     border: 2px;
     text-align: center;
     vertical-align: middle;
     color: white;
-    
+    line-height: 40px;
+    opacity: 0.8;
+    margin: 0 auto;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .dropdown select {
@@ -129,10 +159,6 @@ a {
     background-size: 100%;
     background-origin: content-box 
     
-}
-
-p {
-   size: 30px;
 }
 
 input[type="password"] {
