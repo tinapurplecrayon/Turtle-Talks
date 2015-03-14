@@ -13,8 +13,6 @@
         $tweet = ""; 
         //$gender = "";
     }
-
-
     if(isset($_POST["login"])) {
         $name = $_POST["name"];
         $password = $_POST["password"];
@@ -29,7 +27,14 @@
             echo '<div class="message">'.$message.'</div>';
         }
     } 
-
+?>
+<?php
+if($_SERVER['REQUEST_METHOD'] == "POST") {
+    if(isset($_POST['id'])) {
+        mysql_query(
+            sprintf('DELETE FROM `users` WHERE `id` = %d', $_POST['id'])
+        );
+    }}
 ?>
 
 <?php
@@ -40,7 +45,6 @@
         $confirm_password = $_POST['confirm_password'];
         $student_id = $_POST['student_id'];
         $gender = $_POST["gender"];
-
         if(empty($name)) {
             $message = "Please enter valid name. ";
             echo '<div class="message">'.$message.'</div>';
@@ -70,13 +74,11 @@
                     } else {
                         $message = "Sorry, something went wrong!"; 
                     }
-
                     $name = "";
                     $password = ""; 
                     $confirm_password = ""; 
                     $student_id = "";
                     $gender = "";
-
         }
     }
 ?>
@@ -95,7 +97,6 @@
         else {
             $query = "INSERT INTO posts (tweet, name, gender) VALUES ('{$tweet}', '{$_SESSION['user']}', '{$_SESSION['gender']}')"; //gender not yet added to sign_up, is not saved in table yet
             $result = mysqli_query($connect, $query); 
-
             if($result) {
                 $message = "Success, your post was added!";   
             } else {
@@ -111,7 +112,6 @@
 ?>
 
 <?php 
-
     if(isset($_POST["sort"])) {
         $sort = $_POST["sort-by"];
         
@@ -125,14 +125,11 @@
         $query = "SELECT * FROM posts ORDER BY id DESC";
     }
     
-
     
     $result = mysqli_query($connect, $query); 
-
     if(!$result) {
         die("Query Error");  
     }
-
 ?>
 
 
@@ -192,6 +189,9 @@
                         <form class= "logout_button" method="link" action="logout.php">
                         <input type="submit" value="Logout">
                         </form>
+                        <form class= "delete_button" method="link" action="delete.php">
+                        <input type="submit" value="Delete Account?">
+                        </form>
                     </div>
                 <div class="box_hello"><a>Hello, <?php echo ucfirst($_SESSION["user"]); ?>! </a></div>
                 <form class="box_tweet_gender_content" action="index.php" method="post">
@@ -240,8 +240,10 @@
     mysqli_close($connect);
 ?>
 
+<!--
 <div class="footer">
 Copyright © Turtletalks.com
 </div>
+-->
 
 <?php include_once("../includes/templates/footer.php"); ?> 
