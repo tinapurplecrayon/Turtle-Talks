@@ -26,18 +26,13 @@
     }
 ?>
 
-<!doctype html>
-<html>
-    <head>
-        <title>Format Code</title>
-        <link href="css/style.css" rel="stylesheet" type="text/css">
-    </head>
-    
-        <div class="container">
+
+            
             
             <?php if(isset($_SESSION["user"])) {?>
 
-            <body class="tweet_page">
+            <div class="tweet_page">
+                
                 <?php } else {?>
                         <div class="register-title"></p></div>
                         <div class="login_box">
@@ -69,26 +64,63 @@
                                 </form>
 
                         </div>
+</div>
+</div>
                 <?php } ?>
         
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Turtle Talks</a>
+    </div>
 
-            
-                <body class="login_page">
-                   <?php if(isset($_SESSION["user"])) {?> 
-                    <div class="box_tweet_gender">
-                        <div class="box_hello">
-                                <form class= "logout_button" method="link" action="logout.php">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav nav-tabs" role="tablist">   
+        <li class="active"><a href="#">Home</a></li>
+          
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          About <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Meet the team</a></li>
+            <li><a href="#">Bournmouth University</a></li>
+                              
+          </ul>
+        </li>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+                             <?php if(isset($_SESSION["user"])) {?> 
+                    <div class="">
+                        <div class="">
+                                <form class= "" method="link" action="logout.php">
                                 <input type="submit" value="Logout">
                                 </form>
-                                <a class="delete" href="delete.php?id=<?php echo $_SESSION["user_id"] ?>">Delete</a>
+                                <a class="" href="delete.php?id=<?php echo $_SESSION["user_id"] ?>">Delete</a>
                         </div>
-                        <div class="box_hello"><a>Hello, <?php echo ucfirst($_SESSION["user"]); ?>! </a></div>
-                        <form class="box_tweet_gender_content" action="index.php" method="post">
+                        <div class=""><a>Hello, <?php echo ucfirst($_SESSION["user"]); ?>! </a></div>
+                        <form class="" action="index.php" method="post">
                             What's up? <input type="text" name="tweet" value="" />
                             <input type="submit" name="submit" value="Submit" />
                         </form>
                     </div>
                     <?php } ?>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+            
 
             
         
@@ -105,9 +137,7 @@
                         }
                     ?>
 
-    </body>
-</html>
-
+   
 <?php
     mysqli_free_result($result);
     mysqli_close($connect);
