@@ -30,7 +30,7 @@
 <html>
     <head>
         <title>Format Code</title>
-        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
     </head>
     
         <div class="container">
