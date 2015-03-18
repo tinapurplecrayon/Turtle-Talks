@@ -1,18 +1,14 @@
- <?php
-if(isset($_POST["submit"])) {
-    
-    $_SESSION["id"] = $user["id"];
-    $_SESSION["user"] = $user["name"];
-    $_SESSION["gender"] = $user["gender"];
-    $_SESSION["student_id"] = $user["student_id"];
-    $_SESSION["password"] = $user["password"];
-    
-$query = "DELETE FROM users (id, name, gender, student_id, password) VALUES ('{$_SESSION['id']}', '{$_SESSION['user']}', '{$_SESSION['gender']}', '{$_SESSION['student_id']}', '{$_SESSION['password']}')";
+<?php require_once("sessions.php"); ?>
+<?php require_once("../includes/connect.php"); ?>
+<?php require_once("../includes/functions.php"); ?>
 
-} else {
-    echo "Problem!";
-}
+<?php
+    if(isset($_GET["id"])) {
+        $userID = $_GET["id"]; 
+        $query = "DELETE FROM users WHERE id = '{$userID}'";
+        $result = mysqli_query($connect, $query); 
 
-header('Location: index.php');
-exit;
-?> 
+    } else {
+        echo "Problem!";
+    }
+    ?>
