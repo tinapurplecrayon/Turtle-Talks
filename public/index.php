@@ -93,7 +93,6 @@
           <ul class="dropdown-menu" role="menu">
             <li><a href="#">Meet the team</a></li>
             <li><a href="#">Bournmouth University</a></li>
-                              
           </ul>
         </li>
       <form class="navbar-form navbar-left" role="search">
