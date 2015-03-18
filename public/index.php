@@ -1,7 +1,7 @@
-<?php require_once("sessions.php"); ?>
-<?php require_once("signup.php"); ?>
-<?php require_once("post_submit.php"); ?>
-<?php require_once("login.php"); ?>
+<?php require_once("../includes/sessions.php"); ?>
+<?php require_once("../includes/signup.php"); ?>
+<?php require_once("../includes/post_submit.php"); ?>
+<?php require_once("../includes/login.php"); ?>
 <?php require_once("../includes/connect.php"); ?>
 <?php require_once("../includes/functions.php"); ?>
 <?php include_once("../includes/templates/header.php"); ?>
@@ -113,11 +113,11 @@
     mysqli_close($connect);
 ?>
 
-<!--
+
 <div class="footer">
-Copyright © Turtletalks.com
+Copyright &copy; Turtletalks.com
 </div>
--->
+
 
 
 <?php include_once("../includes/templates/footer.php"); ?> 

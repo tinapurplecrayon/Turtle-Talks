@@ -1,4 +1,4 @@
-<?php require_once("sessions.php"); ?>
+<?php require_once("../incudes/sessions.php"); ?>
 <?php require_once("../includes/connect.php"); ?>
 <?php require_once("../includes/functions.php"); ?>
 
