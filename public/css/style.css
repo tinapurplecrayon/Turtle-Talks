@@ -47,25 +47,55 @@
 }
 
 .delete {
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
     cursor: pointer;
     text-align: center;
-    width: 200px;
-	height: 48px;
-    line-height: 10px;
-	background: #fff;
-	border: 1px solid #fff;
+	background: #d1404b;
+	border: 1px solid #be3b45;
 	cursor: pointer;
 	border-radius: 2px;
-	color: #279000;
+	color: #fff;
 	font-family: 'Exo', sans-serif;
 	font-size: 20px;
 	font-weight: 500;
-    margin: 20 auto;
+    text-decoration: none;
+    margin-bottom: 10px;
+    margin-left: 222px;
+
 }
 
 .delete:hover {
-    opacity: 0.8;
+    background: #ac323b;
 }
+
+.delete_toggle {
+    width: 180px;
+    height: 50px;
+    
+    cursor: pointer;
+    text-align: center;
+    line-height: 10px;
+	background: #d1404b;
+	border: 1px solid #be3b45;
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+     position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.delete_toggle:hover {
+    background: #ac323b;
+}
+
+
 
 .box_tweet_gender {
     color: white;
@@ -83,6 +113,7 @@
 .box_tweet_gender_content {
     text-align: right;
     margin-right: 35px;
+    
 }
 
 .box {
@@ -103,16 +134,11 @@
     margin-left: 20px;
     float: left;
     line-height: 70px;
+    woi
 }
 
 .logout_button {
     float: none;
-    display: inline-block; 
-    padding: 2px 8px;
-}
-
-
-.delete_button {
     display: inline-block; 
     padding: 2px 8px;
 }
@@ -135,11 +161,15 @@
     line-height: 40px;
     margin: 0 auto;
     border-radius: 7px;
-    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
     margin-bottom: -65px;
     z-index: 0;
     overflow: auto;
+    background: -webkit-linear-gradient(#afc600, #8c9f00); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#afc600, #8c9f00); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#afc600, #8c9f00); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#afc600, #8c9f00); /* Standard syntax (must be last) */
 }
 .box_tweet2 {
     height: 150px;
@@ -160,13 +190,67 @@
     z-index: 0;
     overflow: auto;
     margin-bottom: 20px;
+    background: -webkit-linear-gradient(#27338d, #162174); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#27338d, #162174); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#27338d, #162174); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#27338d, #162174); /* Standard syntax (must be last) */
 }
 
 .time_ago {
     opacity: 0.8;
-    overflow: auto;
+    float: left;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.place_of_post {
+    opacity: 0.8;
+    float: right;
+    margin-right: 30px;
+}
+
+.gender {
     float:left;
-    overflow: auto;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.tweet_gender_body {
+    width: 850px;
+    height: 35px;
+    text-align: center;
+    border-radius: 7px;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    margin-top: 12px;
+    text-shadow: 1px 1px 1px #454e00;
+    background: -webkit-linear-gradient(#afc600, #8c9f00); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#afc600, #8c9f00); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#afc600, #8c9f00); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#a6bc00, #9eb400); /* Standard syntax (must be last) */
+}
+
+.tweet_gender_body2 {
+    width: 850px;
+    height: 35px;
+    text-align: center;
+    border-radius: 7px;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    margin-top: 12px;
+    text-shadow: 1px 1px 1px #454e00;
+    background: -webkit-linear-gradient(#323c86, #0f1a72); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#1e297c, #0f1a72); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#1e297c, #0f1a72); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#323c86, #1e2980); /* Standard syntax (must be last) */
+}
+
+.tweet {
+    float:left;
+    margin-top: 50px;
+    margin-left: 10px;
 }
 .comment_post {
     color:red;
@@ -255,7 +339,7 @@ input[type="text"] {
 	padding: 4px;
     font-size: 20px;
     text-align: center;
-    color: #279000;
+    color: #afc600;
 }
 
 input[type="text"]:focus{
@@ -282,7 +366,7 @@ input[type="submit"] {
 	border: 1px solid #fff;
 	cursor: pointer;
 	border-radius: 2px;
-	color: #279000;
+	color: #30a305;
 	font-family: 'Exo', sans-serif;
 	font-size: 20px;
 	font-weight: 500;
@@ -358,95 +442,7 @@ input[type="submit"]:hover{
 }
 
 .footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #efefef;
-  text-align: center;
+height:0px; 
+    position: fixed; 
+    bottom: 20px;
 }
-
-
-/*voting style */
-.voting_wrapper {display:inline-block;margin-left: 20px;}
-.voting_wrapper .down_button {background: url(../images/thumbs.png) no-repeat;float: left;height: 14px;width: 16px;cursor:pointer;margin-top: 3px;}
-.voting_wrapper .down_button:hover {background: url(../images/thumbs.png) no-repeat 0px -16px;}
-.voting_wrapper .up_button {background: url(../images/thumbs.png) no-repeat -16px 0px;float: left;height: 14px;width: 16px;cursor:pointer;}
-.voting_wrapper .up_button:hover{background: url(../images/thumbs.png) no-repeat -16px -16px;;}
-.voting_btn{float:left;margin-right:5px;}
-.voting_btn span{font-size: 11px;float: left;margin-left: 3px;}
-
-
-
-
-/* navbar */
-.navbar-default {
-    background-color: #F8F8F8;
-    border-color: #E7E7E7;
-}
-/* title */
-.navbar-default .navbar-brand {
-    color: #777;
-}
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-    color: #5E5E5E;
-}
-/* link */
-.navbar-default .navbar-nav > li > a {
-    color: #777;
-}
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-    color: #333;
-}
-.navbar-default .navbar-nav > .active > a, 
-.navbar-default .navbar-nav > .active > a:hover, 
-.navbar-default .navbar-nav > .active > a:focus {
-    color: #555;
-    background-color: #E7E7E7;
-}
-.navbar-default .navbar-nav > .open > a, 
-.navbar-default .navbar-nav > .open > a:hover, 
-.navbar-default .navbar-nav > .open > a:focus {
-    color: #555;
-    background-color: #D5D5D5;
-}
-/* caret */
-.navbar-default .navbar-nav > .dropdown > a .caret {
-    border-top-color: #777;
-    border-bottom-color: #777;
-}
-.navbar-default .navbar-nav > .dropdown > a:hover .caret,
-.navbar-default .navbar-nav > .dropdown > a:focus .caret {
-    border-top-color: #333;
-    border-bottom-color: #333;
-}
-.navbar-default .navbar-nav > .open > a .caret, 
-.navbar-default .navbar-nav > .open > a:hover .caret, 
-.navbar-default .navbar-nav > .open > a:focus .caret {
-    border-top-color: #555;
-    border-bottom-color: #555;
-}
-/* mobile version */
-.navbar-default .navbar-toggle {
-    border-color: #DDD;
-}
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-    background-color: #DDD;
-}
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #CCC;
-}
-@media (max-width: 767px) {
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-        color: #777;
-    }
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-        color: #333;
-    }
-}
-
