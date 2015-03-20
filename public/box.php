@@ -10,10 +10,13 @@
     ?>
 
     <div class="time_ago" <h2><?php echo "..".$when; ?></h2> </div>
-        
-    <h2><?php echo ucfirst($row["gender"]); ?></h2>
-    <p><?php echo ucfirst($row["tweet"]); ?></p>
 
+      <div class="tweet_gender_body">   
+        <div class="gender" <h2><?php echo ucfirst($row["gender"]).":"; ?></h2> </div>
+        <div class="tweet" <p><?php echo ucfirst($row["tweet"]); ?></p> </div>
+        <div class="place_of_post" <p><?php echo "Place: ".ucfirst($row["place_of_post"]); ?></p> </div>
+    </div> 
     </div>
+
 <?php } ?>
         
