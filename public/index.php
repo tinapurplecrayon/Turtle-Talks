@@ -107,8 +107,29 @@
                                 <form class= "" method="link" action="logout.php">
                                 <input type="submit" value="Logout">
                                 </form>
-                                <a class="" href="delete.php?id=<?php echo $_SESSION["user_id"] ?>">Delete</a>
+                                
+                        <div class="delete_toggle">
+                        <p>Delete Account</p>
                         </div>
+                        
+                        <div class="delete"><a href="delete.php?id=<?php echo $_SESSION["user_id"] ?>">Sure?</a></div>
+                         
+                        </div>
+                        <div class="box_hello"><a>Hello, <?php echo ucfirst($_SESSION["user"]); ?>! </a></div>
+                        <form class="box_tweet_gender_content" action="index.php" method="post">
+                            What's up? <input type="text" name="tweet" value="" />
+                            Where are you?: <select name="place_of_post">
+                                            <option value="">--Select--</option>
+                                            <option value="talbot campus">Talbot Campus</option>
+                                            <option value="landsdowm campus">Landsdown Campus</option>
+                                            <option value="halls">Halls</option>
+                                            <option value="private accommodation">Private Accommodation</option>
+                                            <option value="unilet">Unilet</option>
+                                            <option value="town">Town</option>
+                                            <option value="none">None</option>
+                                            </select>
+                        <input type="submit" name="submit" value="Submit" />
+                        
                         <div class=""><a>Hello, <?php echo ucfirst($_SESSION["user"]); ?>! </a></div>
                         <form class="" action="index.php" method="post">
                             What's up? <input type="text" name="tweet" value="" />
