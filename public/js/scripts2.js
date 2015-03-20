@@ -10,17 +10,18 @@ $(document).ready(function() {
     
 });
 
-/*$(document).ready(function() {
+$(document).ready(function() {
     
-    $(".comment_post").hide();
+    $(".delete").hide();
     
-    $(".comment_bulk").click(function(){
+    $(".delete_toggle").click(function(){
         console.log("clicked box");
         
-            $(".comment_post").slideToggle();
+            $(".delete").slideToggle();
     });
     
-})*/
+});
+
  
  /*$(window).load(function() {          
 
